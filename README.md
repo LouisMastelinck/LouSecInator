@@ -28,10 +28,11 @@ Download the file and use [7-Zip](https://www.7-zip.org/) to unpack it.
 
 ## ⚠️ Important Notices
 
-- **Do NOT run this tool in a production environment.**  
+- **Do NOT run this tool in a production environment.**  Only run this on sandboxed or clean vm's not part of your infrastructure!
 - Always **notify your security team** before executing this simulation.  
 - This tool may trigger automated investigations or remediation actions within Defender.  
-- Use only in test labs or authorized red team exercises.  
+- Use only in test labs or authorized red team exercises.
+- This exe will invoke activity with known IOC's!
 - **PLEASE REFRAIN FROM UPLOADING THIS SAMPLE TO VIRUSTOTAL, Any.Run, Joe Sandbox, or similar tools.**  
   Doing so will likely result in the sample being flagged and blocked globally, requiring extra effort to whitelist it again.
 
