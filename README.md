@@ -1,7 +1,8 @@
 # Lousecinator - MDE Simulation Malware
 
-<img src="https://github.com/LouisMastelinck/LouSecInator/blob/main/lousecinator.jpeg?raw=true" alt="Lousecinator Screenshot" width="400"/>
-
+<p align="center">
+  <img src="https://github.com/LouisMastelinck/LouSecInator/blob/main/lousecinator.jpeg?raw=true" alt="Lousecinator Screenshot" width="400"/>
+</p>
 
 
 > **⚠️ FOR SECURITY TESTING PURPOSES ONLY**
