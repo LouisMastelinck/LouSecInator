@@ -1,5 +1,8 @@
 # Lousecinator - MDE Simulation Malware
 
+![Lousecinator Screenshot](https://github.com/LouisMastelinck/LouSecInator/blob/main/lousecinator.jpeg?raw=true)
+
+
 > **⚠️ FOR SECURITY TESTING PURPOSES ONLY**
 
 This project provides a **test executable** crafted to trigger incidents in **Microsoft Defender for Endpoint (MDE)**.  
