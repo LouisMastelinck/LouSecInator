@@ -13,6 +13,9 @@ The executable is intended to simulate suspicious behavior that may generate ale
 It is useful in controlled environments for training and testing detection and response capabilities.
 
 ---
+Download the file and use [7-Zip](https://www.7-zip.org/) to unpack it.  
+The password is **"lousec"**.
+---
 
 ## ⚠️ Important Notices
 
