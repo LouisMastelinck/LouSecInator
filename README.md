@@ -28,7 +28,7 @@ Download the file and use [7-Zip](https://www.7-zip.org/) to unpack it.
 
 ## ⚠️ Important Notices
 
-- **Do NOT run this tool in a production environment.**  Only run this on sandboxed or clean vm's not part of your infrastructure!
+- **Do NOT run this tool in a production environment.**  Only run this on sandboxed or clean vm's not part of your domain!
 - Always **notify your security team** before executing this simulation.  
 - This tool may trigger automated investigations or remediation actions within Defender.  
 - Use only in test labs or authorized red team exercises.
