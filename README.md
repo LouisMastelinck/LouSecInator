@@ -2,52 +2,58 @@
 
 > **⚠️ FOR SECURITY TESTING PURPOSES ONLY**
 
-This project contains a **test executable** specifically designed to trigger incidents in **Microsoft Defender for Endpoint (MDE)**.  
-It was created in my personal time as a demonstration tool to support discussions, workshops, and hands-on labs around **incident response and investigation techniques**.
+This project provides a **test executable** crafted to trigger incidents in **Microsoft Defender for Endpoint (MDE)**.  
+Created during my personal time, it serves as a practical tool for workshops, demonstrations, and hands-on labs focused on **incident response and investigation techniques**.
 
 ---
 
 ## ⚙️ Purpose
 
-The executable is intended to simulate suspicious behavior that may generate alerts in Microsoft Defender for Endpoint.  
-It is useful in controlled environments for training and testing detection and response capabilities.
+The executable simulates suspicious behavior that generates alerts within Microsoft Defender for Endpoint.  
+Ideal for controlled environments, it helps security teams practice detection, analysis, and response workflows.
 
 ---
+
+## 📥 Download & Extraction
+
 Download the file and use [7-Zip](https://www.7-zip.org/) to unpack it.  
-The password is **"lousec"**.
+**Password:** `lousec`
+
 ---
 
 ## ⚠️ Important Notices
 
-- **Never run this tool on a production environment.**
-- **Always inform your security team** before running this simulation.
-- This tool may trigger automated investigation or remediation flows in Defender.
-- Only use this in test labs or authorized red team exercises.
+- **Do NOT run this tool in a production environment.**  
+- Always **notify your security team** before executing this simulation.  
+- This tool may trigger automated investigations or remediation actions within Defender.  
+- Use only in test labs or authorized red team exercises.  
+- **PLEASE REFRAIN FROM UPLOADING THIS SAMPLE TO VIRUSTOTAL, Any.Run, Joe Sandbox, or similar tools.**  
+  Doing so will likely result in the sample being flagged and blocked globally, requiring extra effort to whitelist it again.
 
 ---
 
 ## ✅ Verification
 
-To ensure the authenticity and integrity of the file, always validate the SHA256 hash before execution:
+To verify the file’s integrity and authenticity, compare its SHA256 hash before execution:
+
 ### 🔐 SHA256 Checksum
-33215D3CF48F46E59E19EF124307FD5A098B3E08432ECA21820EAF4408E79EA9 
 
+33215D3CF48F46E59E19EF124307FD5A098B3E08432ECA21820EAF4408E79EA9
 
-Only download the executable from **this GitHub repository**.  
-**Do not trust third-party copies.**
+**Important:** Download the executable only from **this GitHub repository**.  
+Avoid untrusted third-party copies.
 
 ---
 
 ## 🔒 Disclaimer
 
-This tool is provided **as-is** without warranty of any kind.  
-The author is not responsible for any misuse, damage, or unintended consequences.  
-By using this tool, you agree that it is strictly for educational and simulation purposes in safe, controlled environments.
+This tool is provided **as-is**, with no warranties or guarantees.  
+The author is not liable for misuse, damage, or unintended effects.  
+By using this tool, you agree it is strictly for educational and simulation purposes within safe, controlled environments.
 
 ---
 
-## 🙋 About
+## 🙋 About the Author
 
-Created by Louis Mastelinck  
-For training and awareness around **Microsoft Defender for Endpoint** incident response workflows.
-This tool has no association with Microsoft and is purely community driven. 
+Created by Louis Mastelinck, this tool supports training and awareness around **Microsoft Defender for Endpoint** incident response.  
+It is a community-driven project with no affiliation to Microsoft.
